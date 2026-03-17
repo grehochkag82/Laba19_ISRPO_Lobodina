@@ -107,6 +107,45 @@ console.log(numbersArr.indexOf(2));
 console.log(fruits.includes("яблоко"));
 console.log(fruits.includes("манго"));
 
+let user2={
+    name: "Ivan",
+    age:20,
+    isStudent: true,
+    sayHello: function(){
+        console.log("Hello, my name is ${name}")
+    },
+};
+
+user2.sayHello();
+
+console.log(user2);
+
+console.log(user2.name);
+console.log(user2.age);
+
+console.log(user2["name"]);
+
+user2.age=30;
+user2.name ="Кирилл";
+delete user2.isSrudent;
+console.log(user2);
+
+for (let key in user2){
+    console.log(key + ";"+ user2[key]);
+}
+
+let student ={
+    name: " Григорий",
+    skills: ["HTML", "CSS", "JS"],
+    address: {
+        city: "Волжский",
+        street: "Пушкина",
+    },
+};
+
+console.log(student.skills[0]);
+console.log(student.address.city);
+
 //задания
 let sum = 0;
 for (let i = 1; i <= 10; i++) {
@@ -175,4 +214,32 @@ if (cities.includes(searchCity)) {
     console.log(`Город ${searchCity} найден, индекс:`, cities.indexOf(searchCity));
 } else {
     console.log(`Город ${searchCity} не найден`);
+}
+//
+let book = {
+    title: "Война и мир",
+    author: "Лев Толстой",
+    year: 1869
+};
+console.log("Книга:", book.title, book.author, book.year);
+book.year = 2024;
+console.log("Обновлённый год:", book.year);
+// 
+let car = {
+    brand: "Toyota",
+    year: 1111,
+    getInfo: function () {
+        console.log(`Автомобиль: ${this.brand}, год выпуска: ${this.year}`);
+    }
+};
+car.getInfo();
+//
+let product = {
+    name: "Ноутбук",
+    price: 75000,
+    inStock: true
+};
+console.log("Свойства product:");
+for (let prop in product) {
+    console.log(prop + ":", product[prop]);
 }
