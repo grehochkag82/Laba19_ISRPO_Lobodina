@@ -79,6 +79,34 @@ const calculate =(a,b) =>{
     let result = a+b;
     return result*2;
 }
+
+let numbersArr= [1,2,3,4,5];
+console.log(numbersArr);
+console.log(numbersArr[0]);
+console.log(numbersArr[1]);
+
+console.log(numbersArr.length);
+numbersArr.push(10);
+console.log(numbersArr);
+
+numbersArr.pop();
+console.log(numbersArr);
+
+let numbers2 = [10,20,30];
+for (let i=0; i< numbers2.length; i++){
+    console.log(numbers2[i]);
+}
+
+for (let value of numbers2){
+    console.log(value);
+}
+let mixedArray = [1, "text", true, 3.14];
+console.log(numbersArr.includes(1));
+console.log(numbersArr.indexOf(2));
+
+console.log(fruits.includes("яблоко"));
+console.log(fruits.includes("манго"));
+
 //задания
 let sum = 0;
 for (let i = 1; i <= 10; i++) {
@@ -130,4 +158,21 @@ function calculateDiscount(price, discount = 10) {
     return price - (price * discount) / 100;
 }
 console.log("Цена со скидкой (по умолчанию 10%):", calculateDiscount(1000));
-
+//
+let colors = ["красный", "зеленый", "синий"];
+colors.push("желтый");
+colors.shift();
+console.log("Массив цветов:", colors);
+//
+let students = [];
+students.push("Анна", "Иван", "Мария");
+students.pop();
+console.log(students); 
+//
+let cities = ["Москва", "Санкт-Петербург", "Казань", "Новосибирск"];
+let searchCity = "Казань";
+if (cities.includes(searchCity)) {
+    console.log(`Город ${searchCity} найден, индекс:`, cities.indexOf(searchCity));
+} else {
+    console.log(`Город ${searchCity} не найден`);
+}
