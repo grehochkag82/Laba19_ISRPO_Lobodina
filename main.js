@@ -82,7 +82,7 @@ const calculate =(a,b) =>{
 
 let numbersArr= [1,2,3,4,5];
 console.log(numbersArr);
-console.log(numbersArr[0]);
+console.log(numbersArr[0] );
 console.log(numbersArr[1]);
 
 console.log(numbersArr.length);
